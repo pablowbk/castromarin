@@ -1,0 +1,19 @@
+{
+  "name": "castromarin",
+  "version": "1.0.0",
+  "description": "Landing Page for Castro&Marin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pablowbk/castromarin.git"
+  },
+  "author": "PabloWBK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pablowbk/castromarin/issues"
+  },
+  "homepage": "https://github.com/pablowbk/castromarin#readme"
+}
