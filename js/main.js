@@ -91,7 +91,7 @@ function parallaxMagic() {
   contactParallax.style.backgroundPositionY = (yScroll * 0.05) - 220 + "px";
 }
 
-window.addEventListener('scroll', parallaxMagic);
+// window.addEventListener('scroll', parallaxMagic);
 
 
 

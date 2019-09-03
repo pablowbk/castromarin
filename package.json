@@ -4,7 +4,9 @@
   "description": "Landing Page for Castro&Marin",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "run-script-os",
+    "start:win32": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser 'Chrome'",
+    "start:darwin:linux": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser 'Chrome'"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/pablowbk/castromarin/issues"
   },
-  "homepage": "https://github.com/pablowbk/castromarin#readme"
+  "homepage": "https://github.com/pablowbk/castromarin#readme",
+  "dependencies": {
+    "browserify": "^16.5.0"
+  }
 }
