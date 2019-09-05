@@ -21,7 +21,6 @@
     <span class="line"></span>
   </button>
   <ul id="navUl">
-    <li><a href="#home" id="navHome">Inicio</a></li>
     <li><a href="#about" id="navAbout">Quienes Somos</a></li>
     <li><a href="#services" id="navServices">Que Hacemos</a></li>
     <li><a href="#work" id="navWork">Como Trabajamos</a></li>
@@ -47,8 +46,29 @@
 <!-- Main Content -->
   <!-- About start -->
 <section class="about" id="about">
+  <header>
+    <h2>Quienes Somos</h2>
+  </header>
+
+  <div class="about__desc">
+    <p class="about__desc_p">
+      Somos un equipo de profesionales interdisciplinarios, avocados desde nuevos y eficaces
+      tratamientos.
+    </p>
+    <p class="about__desc_p">
+      Así nace nuestro Centro, a cargo de <strong class="mnc">María Nélida Castro</strong> y <strong class="pm">Pilar
+        Marín</strong>, especialistas en <b class="mnc">atención clínica de
+      adultos</b> y en <b class="pm">Psicología
+      Infanto-Juvenil</b>.
+    </p>
+    <p class="about__desc_p">
+      Nuestro equipo reside en la zona Norte de la provincia Buenos Aires, y pone a tu disposición <b>terapias que
+        ayudan a vivir mejor</b>.
+    </p>
+  </div>
 
     <!-- Cards start -->
+    <!--
   <div class="about__cards">
     <div class="card green">
       <img src="/img/1-1.jpg" alt="">
@@ -77,21 +97,25 @@
   </div>
     <!-- Cards End -->
 
+    <div class="banner">
+      <h3>El protagonista del proceso terapéutico sos vos</h3>
+    </div>
+
     <!-- Columns start -->
   <div class="about__cols">
     <div class="col col-1">
-      <img src="/img/2-1.jpg" alt="">
+      <div class="profile"></div>
       <div class="col_content">
-        <h3>Two Columns Left Side</h3>
+        <h3>María Nélida Castro</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, pariatur veritatis, quod accusantium iste quaerat molestiae nobis assumenda natus quo perspiciatis neque repellendus quos eligendi excepturi rem. Eius, unde, nihil.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum assumenda libero eos aut delectus laboriosam, repellendus repudiandae nulla ea odit repellat facere at saepe deserunt necessitatibus, vel, rem corrupti hic?</p>
         <button class="btn btn-more">Read More</button>
       </div>
     </div>
     <div class="col col-2">
-      <img src="/img/2-2.jpg" alt="">
+      <div class="profile"></div>
       <div class="col_content">
-        <h3>Two Columns Right Side</h3>
+        <h3>Pilar Marín</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt placeat, incidunt optio porro nisi vitae vel aliquid sunt pariatur ipsam! Fugiat optio velit nesciunt quibusdam reiciendis nobis modi et ratione!</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quae mollitia iste amet? Maiores molestias provident cumque perferendis accusantium quibusdam, nobis ullam, doloremque accusamus natus quaerat minus eos tenetur quia.</p>
         <button class="btn btn-more">Read More</button>
@@ -156,6 +180,52 @@
 </section>
   <!-- Services End -->
 
+<!-- Services Start -->
+<section class="como" id="como">
+  <header>
+    <h2>Our Services</h2>
+         
+  </header>
+  <div class="services__cols">
+
+    <div class="col col-big">
+      <img src="/img/profile.jpg" alt="">
+      <div class="col-big_content">
+        <h3>Terapia para niños y adolescentes</h3>
+        <div class="text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt sapiente quas hic officiis corporis,
+            deserunt, recusandae autem! Eaque amet ipsa sapiente in quam, placeat. Veniam enim corporis quis, minima
+            ipsum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum iusto ex, aliquid provident modi,
+            nobis aperiam officiis. Vitae nostrum voluptatem dolorum? Sapiente autem, ipsa laudantium id distinctio
+            rerum consequatur quis.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor delectus cupiditate aliquam deserunt ad
+            cumque, corrupti at itaque nisi odio enim maxime ipsa nulla unde, ipsum quo tempore eveniet deleniti!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo inventore doloremque, illum voluptate dolor
+            nobis ex, provident asperiores? Enim eius dolore mollitia, doloribus quia suscipit illo. Ipsum, illo neque
+            eveniet.</p>
+        </div>
+        <button>Read more</button>
+      </div>
+    </div>
+
+    <div class="col col-big">
+      <img src="/img/profile.jpg" alt="">
+      <div class="col-big_content">
+        <h3>Terapia para Adultos</h3>
+        <div class="text">
+          <p>Consideramos que los primeros años de vida son decisivos para el futuro del niño.<br>
+            La familia es el medio principal para conocer el mundo y da el alojamiento.</p>
+          <p>Niños y adolescentes generan los recursos desde sus aspectos más sanos.
+            Ellos se integran con su entorno, siempre acompañados y contenidos por sus padres : su crecimiento pérsonal
+            dependerá del manejo adecuado de sus emociones, sensaciones y creencias sobre si mismo.</p>
+        </div>
+        <button>Read more</button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Services End -->
+
   <!-- Contact Start -->
 <section class="contact" id="contact">
   <header>
@@ -180,7 +250,7 @@
 
     <textarea name="meesage" maxlength="280" placeholder="Your message here..."></textarea>
 
-    <input id="submit" type="submit" name"submit" value="Send">
+    <input id="submit" type="submit" name="submit" value="Send">
   </form>
 </section>
   <!-- Contact End -->

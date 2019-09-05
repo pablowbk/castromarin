@@ -12,7 +12,6 @@ const servicesParallax = document.querySelector('.services header');
 const contactParallax = document.getElementById('contact');
 
   // Nav Btns
-const navHome = document.getElementById('navHome');
 const navAbout = document.getElementById('navAbout');
 const navServices = document.getElementById('navServices');
 const navContact = document.getElementById('navContact');
@@ -29,11 +28,6 @@ var yOffset; // pageYOffset value
 function setActiveLink() {
   var yOffset = window.pageYOffset + 80; // 80px is the fixed navbar height
   // console.log(window.pageYOffset);
-
-  // Check if Home is visible and add 'active' class to nav btn
-  yOffset < about.offsetTop
-  ? navHome.classList.add('active')
-  : navHome.classList.remove('active')
 
   // Check if About is visible and add 'active' class to nav btn
   yOffset >= about.offsetTop && yOffset < services.offsetTop
