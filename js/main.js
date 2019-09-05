@@ -1,19 +1,18 @@
 // DOM Elements declaration
   // Sections
-const home = document.querySelector('.hero');
 const about = document.querySelector('.about');
-const services = document.querySelector('.services');
+const services = document.querySelector('#services');
+const work = document.querySelector('#work');
 const contact = document.querySelector('.contact');
 const navUl = document.getElementById('navUl');
 
   // Parallax containers
-const heroParallax = document.getElementById('home');
-const servicesParallax = document.querySelector('.services header');
-const contactParallax = document.getElementById('contact');
+
 
   // Nav Btns
 const navAbout = document.getElementById('navAbout');
 const navServices = document.getElementById('navServices');
+const navWork = document.getElementById('navWork');
 const navContact = document.getElementById('navContact');
 const navToggle = document.querySelector('.navToggle');
 const menuLinks = document.querySelectorAll('.nav a')
@@ -35,9 +34,14 @@ function setActiveLink() {
   : navAbout.classList.remove('active')
 
   // Check if Services is visible and add 'active' class to nav btn
-  yOffset >= services.offsetTop && yOffset < contact.offsetTop
+  yOffset >= services.offsetTop && yOffset < work.offsetTop
   ? navServices.classList.add('active')
   : navServices.classList.remove('active')
+
+  // Check if Work is visible and add 'active' class to nav btn
+  yOffset >= work.offsetTop && yOffset < contact.offsetTop
+  ? navWork.classList.add('active')
+  : navWork.classList.remove('active')
 
   // Check if Contact is visible and add 'active' class to nav btn
   yOffset >= contact.offsetTop && yOffset < document.querySelector('footer').offsetTop

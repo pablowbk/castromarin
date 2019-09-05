@@ -46,7 +46,7 @@
 <!-- Main Content -->
   <!-- About start -->
 <section class="about" id="about">
-  <header>
+  <header class="section__header">
     <h2>Quienes Somos</h2>
   </header>
 
@@ -98,7 +98,7 @@
     <!-- Cards End -->
 
     <div class="banner">
-      <h3>El protagonista del proceso terapéutico sos vos</h3>
+      <h3>El <span>protagonista</span> del proceso terapéutico <span>sos vos</span></h3>
     </div>
 
     <!-- Columns start -->
@@ -128,9 +128,8 @@
 
   <!-- Services Start -->
 <section class="services" id="services">
-  <header>
-    <h2>Our Services</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae nemo voluptatum odit deserunt odio voluptates sapiente expedita ut cum, sit hic nobis praesentium?</p>
+  <header class="section__header">
+    <h2>Que Hacemos</h2>
   </header>
   <div class="services__cols">
     <div class="col col-sm">
@@ -181,15 +180,53 @@
   <!-- Services End -->
 
 <!-- Services Start -->
-<section class="como" id="como">
-  <header>
-    <h2>Our Services</h2>
-         
+<section class="services" id="work">
+  <header class="section__header">
+    <h2>Como Trabajamos</h2>         
   </header>
+
+  <div class="banner">
+    <h3>
+      Consideramos la salud como un estado de bienestar en el cual la persona, conciente de sus capacidades, afronta las tensiones de la vida, trabaja en forma productiva y es capaz de hacer una contribución a su comunidad.
+    </h3>
+  </div>
   <div class="services__cols">
 
+    <div class="col col-sm">
+      <div class="col_content">
+        <h3>Diagnóstico</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate beatae, ad consectetur, sapiente id nemo eius
+          ab fuga ipsam aliquam!</p>
+        <!-- <button>More</button> -->
+      </div>
+    </div>
+    <div class="col col-sm">
+      <div class="col_content">
+        <h3>Tratamiento</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo doloribus earum necessitatibus possimus veniam
+          temporibus assumenda.</p>
+        <button>Read it</button>
+      </div>
+    </div>
+    <div class="col col-sm">
+      <div class="col_content">
+        <h3>Integración</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod sapiente tempora perferendis quo sit, soluta
+          officiis, ratione minus ullam, consequatur totam.</p>
+        <!-- <button>More</button> -->
+      </div>
+    </div>
+    <div class="col col-sm">
+      <div class="col_content">
+        <h3>Seguimiento</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio blanditiis perspiciatis esse quas delectus culpa
+          laboriosam.</p>
+        <button>Details</button>
+      </div>
+    </div>
+
     <div class="col col-big">
-      <img src="/img/profile.jpg" alt="">
+      <!-- <img src="/img/profile.jpg" alt=""> -->
       <div class="col-big_content">
         <h3>Terapia para niños y adolescentes</h3>
         <div class="text">
@@ -209,7 +246,7 @@
     </div>
 
     <div class="col col-big">
-      <img src="/img/profile.jpg" alt="">
+      <!-- <img src="/img/profile.jpg" alt=""> -->
       <div class="col-big_content">
         <h3>Terapia para Adultos</h3>
         <div class="text">
@@ -228,29 +265,57 @@
 
   <!-- Contact Start -->
 <section class="contact" id="contact">
-  <header>
-    <h2>Contact Form</h2>
-    <p>Nunc diam leo, fringilla vulputate elit lobortis, consectetur vestibulum quam. Sed id felis ligula. In euismod libero at magna dapibus, in rutrum velit lacinia. Etiam a mi quis arcu varius condimentum.</p>
+  <header class="section__header">
+    <h2>Contacto</h2>
+    <p>
+      Si lo desea puede solicitar información a través del siguiente formulario. Los datos solicitados a continuación no tienen otro uso que el relativo a la solicitud de información actual. No serán utilizados con otro propósito. Son confidenciales. No serán, en ningún caso, cedidos a terceros. Una vez cumplida la función para la que se requirieron, no se guarda registro de ellos.</p>
+    <!-- Conozca nuestra política de privacidad y protección de datos. -->
   </header>
-  <form action="">
+  <form action="" name="formulario_contacto">
     <fieldset class="form_name">
-      <input type="text" id="name" placeholder="Name" required>
-      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Nombre Completo" required>
+      <label for="name">Nombre</label>
     </fieldset>
 
     <fieldset class="form_email">
       <input type="email" id="email" placeholder="Email" required>
-      <label for="email">Email</label>
+      <label for="email">Correo electrónico</label>
     </fieldset>
 
-    <fieldset class="form_subject">
-      <input type="text" id="subject" placeholder="Subject">
-      <label for="subject">Subject</label>
+    <fieldset class="form_provincia">
+      <select name="provincia">
+        <option value="seleccione" selected disabled>Provincia...</option>
+        <option value="Buenos Aires">Buenos Aires</option>
+        <option value="Capital Federal">Capital Federal</option>
+        <option value="Catamarca">Catamarca</option>
+        <option value="Chaco">Chaco</option>
+        <option value="Chubut">Chubut</option>
+        <option value="Cordoba">Cordoba</option>
+        <option value="Corrientes">Corrientes</option>
+        <option value="Entre Rios">Entre Rios</option>
+        <option value="Formosa">Formosa</option>
+        <option value="Jujuy">Jujuy</option>
+        <option value="La Pampa">La Pampa</option>
+        <option value="La Rioja">La Rioja</option>
+        <option value="Mendoza">Mendoza</option>
+        <option value="Misiones">Misiones</option>
+        <option value="Neuquen">Neuquen</option>
+        <option value="Rio Negro">Rio Negro</option>
+        <option value="Salta">Salta</option>
+        <option value="San Juan">San Juan</option>
+        <option value="San Luis">San Luis</option>
+        <option value="Santa Cruz">Santa Cruz</option>
+        <option value="Santa Fe">Santa Fe</option>
+        <option value="Sgo. del Estero">Sgo. del Estero</option>
+        <option value="Tierra del Fuego">Tierra del Fuego</option>
+        <option value="Tucuman">Tucuman</option>
+      </select>
+      <label for="provincia">Provincia</label>
     </fieldset>
 
-    <textarea name="meesage" maxlength="280" placeholder="Your message here..."></textarea>
+    <textarea name="meesage" maxlength="280" placeholder="Escriba su comentario..."></textarea>
 
-    <input id="submit" type="submit" name="submit" value="Send">
+    <input id="submit" type="submit" name="submit" value="Enviar">
   </form>
 </section>
   <!-- Contact End -->

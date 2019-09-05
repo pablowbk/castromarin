@@ -294,12 +294,12 @@ button {
   padding-top: 100px;
 }
 
-.about header {
+.section__header {
   display: grid;
   justify-items: stretch;
 }
 
-.about header h2 {
+.section__header h2 {
   text-align: center;
   font-size: 2em;
   color: #666;
@@ -308,7 +308,7 @@ button {
   position: relative;
 }
 
-.about header h2::after {
+.section__header h2::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -530,13 +530,7 @@ button {
 }
 
 @media (max-width: 500px) {
-  .about__cards {
-    /* max-width: 100%; */
-  }
-
-  .card {
-    
-  }
+  
 }
 
 .banner {
@@ -548,12 +542,23 @@ button {
 
 .banner h3 {
   font-size: 2em;
+  margin: 2em;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   color: #666;
   /* margin: 0 0 15px; */
   position: relative;
+}
+
+.banner span:first-of-type {
+  color: var(--accent);
+  text-shadow: 1px 1px 2px #666;
+}
+
+.banner span:last-of-type {
+  color: var(--primary);
+  text-shadow: 1px 1px 2px #666;
 }
 
 /* .banner h3::before {
@@ -576,7 +581,8 @@ button {
 
 @media (max-width: 800px) {
   .banner h3 {
-    font-size: 1.2em;
+    font-size: 1.5em;
+    padding: 1em;
   }
 }
 
@@ -590,35 +596,9 @@ button {
 
 .services header {
   justify-self: stretch;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 0 60px;
-  height: 300px;
-  background: #eee;
-  background-image: url('../img/bg-2.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* background-attachment: fixed; */
-  background-position: center top;
+  margin: auto 2em;  
 }
 
-.services header h2, .services header p {
-  color: #fff;
-}
-
-.services header h2 {
-  margin-top: 20px;
-  font-weight: 500;
-  text-shadow: 2px 2px #aaa;
-}
-
-.services header p {
-  line-height: 1.6em;
-  text-align: center;
-  max-width: 800px;
-}
 
 .services__cols {
   display: grid;
@@ -632,7 +612,7 @@ button {
 
 .services__cols h3 {
   font-weight: 700;
-  text-align: center;
+  text-align: left;
   color: #666;
   margin: 0 0 15px;
 }
@@ -715,43 +695,34 @@ button {
 /* === Contact section === */
 .contact {
   display: grid;
-  background: #999;
-  justify-content: center;
+  grid-template-columns: 1fr;
+  justify-items: center;
   grid-gap: 20px;
-  background-image: url('../img/bg-3.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* background-attachment: fixed; */
-  background-position: center;
 }
 
 .contact header {
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 100px auto 0;
-  max-width: 800px;
+  justify-self: stretch;
+  margin: 100px 2em 0;
   padding: 0 10px;
 }
 
 .contact header h2 {
   margin-top: 20px;
-  font-weight: 500;
-  color: #fff;
-  text-shadow: 2px 2px #333;
+  font-size: 2em;
 }
 
-.contact header p {
-  line-height: 1.6em;
-  text-align: center;
-  background: rgba(255, 255, 255, .4);
+.contact .section__header p {
+  justify-self: center;
+  max-width: 800px;
+  text-align: left;
+  background: #f2f2f2;
   border-radius: 5px;
-  padding: 20px;
+  padding: 2em;
 }
 
 .contact form {
-  max-width: 800px;
+  justify-self: stretch;
+  margin: auto 2em;
   padding: 0 10px;
   display: grid;
   grid-gap: 20px;
@@ -773,11 +744,11 @@ button {
   grid-area: email;
 }
 
-.form_subject {
+.form_provincia {
   grid-area: subject;
 }
 
-form #name, form #email, form #subject, form textarea {
+form #name, form #email, form #subject, form textarea, form select {
   width: 100%;
 }
 
@@ -788,11 +759,12 @@ form fieldset {
   padding: 0;
 }
 
-form input {
+form input, .form_provincia select {
+  font-size: 1em;
   padding: 10px;
   border-radius: 5px;
   border: none;
-  background: rgba(255, 255, 255, .4);
+  background: rgba(100, 100, 100, 0.1);
 }
 
 form label {
@@ -803,19 +775,21 @@ form label {
 }
 
 form textarea {
+  font-size: 1em;
   color: #333;
   justify-self: stretch;
   grid-area: textarea;
   border-radius: 5px;
   padding: 10px;
-  background: rgba(255, 255, 255, .4);
+  background: rgba(100, 100, 100, 0.1);
   border: none;
 }
+
 
 form #submit {
   grid-area: submit;
   justify-self: start;
-  background-color: rgb(40, 40, 40);
+  background-color: var(--accent);
   color: #fff;
   border: 1px solid #fff;
   font-size: 1em;
@@ -840,10 +814,6 @@ form input::placeholder, form textarea::placeholder {
 
   .contact header h2 {
     font-size: 1.5em;
-  }
-
-  .contact header p {
-
   }
 
   .contact form {
@@ -907,6 +877,6 @@ form input::placeholder, form textarea::placeholder {
   }
 
   .footer_text p {
-
+    margin: 0;
   }
 }
