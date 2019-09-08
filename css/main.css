@@ -88,7 +88,7 @@ button {
 .active {
   background: var(--primary);
   font-weight: 600;
-  /* box-shadow: 0 10px 5px -5px rgba(19, 102, 96, .5); */
+  /* box-shadow: 0 5px 10px -5px rgba(19, 102, 96, .5); */
 }
 
 /* === Hamburguer Btn */
@@ -126,9 +126,7 @@ button {
     flex-direction: column;
     margin-top: -500px;
     transition: all 300ms ease-out;
-    background: rgba(173, 231, 227, .2)
-    /* border: 1px solid #333;
-    border-radius: 2px; */
+    background: rgb(213, 235, 233);
   }
 
   .nav li {
@@ -178,9 +176,9 @@ button {
 }
 
 .toTopBtn img {
-  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, .5));
+  filter: invert(100%) drop-shadow(1px 3px 2px rgba(0, 0, 0, .3));
   cursor: pointer;
-  transition: all 500ms ease;
+  transition: transform 300ms ease;
 }
 
 .toTopBtn img:active {
@@ -199,13 +197,14 @@ button {
   justify-items: center;
   text-align: center;
   height: 614px;
+  height: 100vh;
   background: #fff;
   /* background-image: url("../img/bg-1.jpg"); */
-  background-repeat: no-repeat;
-  background-position: top;
+  /* background-repeat: no-repeat; */
+  /* background-position: top; */
   /* background-attachment: fixed; */
   /* background-size: auto 100%; */
-  background-size: cover;
+  /* background-size: cover; */
 }
 
 .hero header {
@@ -214,6 +213,7 @@ button {
   align-items: center;
   align-content: center;
   justify-items: center;
+  cursor: default;
 }
 
 .hero h1 {
@@ -304,7 +304,7 @@ button {
   font-size: 2em;
   color: #666;
   padding-bottom: .5em;
-  margin-bottom: 2em;
+  /* margin-bottom: 2em; */
   position: relative;
 }
 
@@ -321,11 +321,12 @@ button {
 
 .about__desc {
   font-size: 1.2em;
+  margin-top: 2em;
 }
 
 .about__desc_p {
   margin: 0;
-  padding: 0 20%;
+  padding: 0 15%;
 }
 
 .about__desc_p + .about__desc_p {
@@ -444,6 +445,7 @@ button {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  transition: box-shadow 300ms;
 }
 
 .col_content {
@@ -462,6 +464,11 @@ button {
 .col-2 {
   grid-area: col2;
   position: relative;
+}
+
+.col-1:hover, .col-1:focus,
+.col-2:hover, .col-2:focus {
+  box-shadow: 0 5px 10px -5px var(--grey);
 }
 
 .col img {
@@ -485,6 +492,8 @@ button {
 }
 
 .col_content h3 {
+  justify-self: center;
+  align-self: flex-start;
   font-weight: 700;
   margin: 10px 0 20px;
   text-align: center;
@@ -496,6 +505,7 @@ button {
 
 .col_content .btn {
   justify-self: end;
+  align-self: flex-end;
   padding: 10px 30px;
   border-radius: 10px;
   border: none;
@@ -513,11 +523,11 @@ button {
   .about {
     grid-template-columns: 1fr;
     margin: 0 10px;
+    padding-top: 2em;
   }
 
   .about__cards, .about__cols {
     grid-template-columns: minmax(200px, 400px);
-    /* max-width: min-content; */
     margin: 0 30px 30px;
   }
 
@@ -530,7 +540,10 @@ button {
 }
 
 @media (max-width: 500px) {
-  
+  .about__desc_p {
+    margin: 0;
+    padding: 0 1em;
+  }
 }
 
 .banner {
@@ -541,13 +554,13 @@ button {
 }
 
 .banner h3 {
-  font-size: 2em;
-  margin: 2em;
+  font-size: 1.5em;
+  padding: 0 15%;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   color: #666;
-  /* margin: 0 0 15px; */
+  margin: 1em 0 2em;
   position: relative;
 }
 
@@ -581,7 +594,7 @@ button {
 
 @media (max-width: 800px) {
   .banner h3 {
-    font-size: 1.5em;
+    font-size: 1.2em;
     padding: 1em;
   }
 }
@@ -677,6 +690,12 @@ button {
     grid-template-columns: repeat(2, minmax(100px, 360px));
     padding: 10px;
     grid-gap: 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  .services {
+    padding-top: 2em;
   }
 }
 
