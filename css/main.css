@@ -98,22 +98,56 @@ button {
   position: fixed;
   top: 0;
   right: 0;
+  width: 48px;
+  height: 40px;
   border: none;
+  border-radius: 2px;
   margin: 10px;
   padding: 10px;
 }
 
 .line {
   display: block;
+  position: absolute;
+  top: 50%;
   width: 28px;
   height: 4px;
-  border-radius: 1px;
+  transform: translateY(-50%);
   background-color: #333;
+  transition: background-color 300ms, transform 300ms;
 }
 
-.line + .line {
-  margin-top: 4px;
+.line:nth-of-type(1) { 
+  margin-top: -8px;
 }
+
+.line:nth-of-type(3) {
+  margin-top: 8px;
+}
+
+.line:nth-of-type(2) {
+  transition: background-color 50ms, transform 50ms;
+}
+
+/* .line + .line {
+  margin-top: 4px;
+} */
+
+/* action when menu is expanded */
+.navToggle.expanded .line:nth-of-type(2) {
+  background-color: transparent;
+}
+
+.navToggle.expanded .line:nth-of-type(1) {
+  transform: rotate(45deg);
+  margin-top: -2px;
+}
+
+.navToggle.expanded .line:nth-of-type(3) {
+  transform: rotate(-45deg);
+  margin-top: -2px;
+}
+
 
 /* Media query for NAV @ 800px */
 @media (max-width: 800px) {
@@ -172,13 +206,14 @@ button {
   padding: 0;
   transition: all 500ms ease;
   display: none;
+  opacity: 0;
   z-index: 999;
 }
 
 .toTopBtn img {
   filter: invert(100%) drop-shadow(1px 3px 2px rgba(0, 0, 0, .3));
   cursor: pointer;
-  transition: transform 300ms ease;
+  transition: transform 300ms, opacity 300ms;
 }
 
 .toTopBtn img:active {
@@ -187,6 +222,7 @@ button {
 
 .show {
   display: flex;
+  opacity: 1;
 }
 
 /* === Hero === */
@@ -197,14 +233,15 @@ button {
   justify-items: center;
   text-align: center;
   height: 614px;
-  height: 100vh;
-  background: #fff;
+  background: var(--primary);
   background-image: url("../img/hero2.jpg");
-  /* background-repeat: no-repeat; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -100px;
+  /* background-position-x: 50px; */
   /* background-position: top; */
-  /* background-attachment: fixed; */
-  /* background-size: auto 100%; */
-  /* background-size: cover; */
+  background-attachment: fixed;
+  background-blend-mode: overlay;
 }
 
 .hero header {
@@ -263,18 +300,24 @@ button {
   .hero {
     margin-top: 0;
     height: 100vh;
+    background-position-y: 0px;
+    background-position-x: -100px;
   }
-
+  
   .hero h1 {
     font-size: 2.5em;
   }
-
+  
   .hero header p {
     font-size: 1em;
   }
 }
 
 @media (max-width: 500px) {
+  .hero {
+    background-position-x: -200px;
+  }
+
   .hero h1 {
     font-size: 2em;
   }
@@ -433,7 +476,7 @@ button {
   grid-template-columns: repeat(2, minmax(100px, 600px));
   grid-template-areas: "col1 col2";
   grid-gap: 30px;
-  margin-top: 30px;
+  /* margin-top: 30px; */
   margin-bottom: 60px;
   justify-items: center;
   justify-content: center;
@@ -554,13 +597,13 @@ button {
 }
 
 .banner h3 {
-  font-size: 1.5em;
+  font-size: 1.7em;
   padding: 0 15%;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   color: #666;
-  margin: 1em 0 2em;
+  margin: 2em 0;
   position: relative;
 }
 
@@ -594,8 +637,17 @@ button {
 
 @media (max-width: 800px) {
   .banner h3 {
-    font-size: 1.2em;
-    padding: 1em;
+    font-size: 1.4em;
+    /* padding: 1em;
+    margin: 1em 0; */
+    padding: 0 1.5em;
+  }
+}
+
+@media (max-width: 500px) {
+  .banner h3 {
+    font-size: 1em;
+    padding: 0 1em;
   }
 }
 
@@ -734,7 +786,7 @@ button {
   justify-self: center;
   max-width: 800px;
   text-align: left;
-  background: #f2f2f2;
+  /* background: #f2f2f2; */
   border-radius: 5px;
   padding: 2em;
 }
@@ -745,7 +797,7 @@ button {
   padding: 0 10px;
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(200px, 600px));
   grid-template-areas:
     "name     textarea"
     "email    textarea"
@@ -767,7 +819,7 @@ button {
   grid-area: subject;
 }
 
-form #name, form #email, form #subject, form textarea, form select {
+form input, form textarea, form select {
   width: 100%;
 }
 
@@ -828,15 +880,14 @@ form input::placeholder, form textarea::placeholder {
 
 @media (max-width:800px) {
   .contact header {
-    margin: 80px auto 0;
+    margin: 80px 2em 0;
   }
 
-  .contact header h2 {
-    font-size: 1.5em;
+  .contact header p {
+    font-size: 1em;
   }
 
   .contact form {
-    max-width: none;
     grid-template-columns: 1fr;
     grid-template-areas:
       "name"
@@ -858,23 +909,26 @@ form input::placeholder, form textarea::placeholder {
   margin-top: 100px;
   padding: 10px;
   display: grid;
+  grid-gap: 1em;
+  grid-template-areas: "copyright codeby unsplash";
   justify-items: center;
+  justify-content: center;
   background: #fff;
+  color: #333;
 }
 
 .footer_text p {
-  color: #999;
   text-align: center;
 }
 
-.footer_text a {
+.codeby a {
   text-decoration: none;
   color: var(--grey);
   font-weight: 600;
   position: relative;
 }
 
-.footer_text a::after {
+.codeby a::after {
   content: "";
   height: 4px;
   background: var(--grey);
@@ -886,8 +940,41 @@ form input::placeholder, form textarea::placeholder {
   transition: width 200ms ease-in;
 }
 
-.footer_text a:hover::after {
+.codeby a:hover::after {
   width: 100%;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.footer_text {
+  grid-area: copyright;
+}
+
+.codeby {
+  margin: 0;
+  padding: 0;
+  grid-area: codeby;
+}
+
+.unsplash {
+  grid-area: unsplash;
+  background-color:#666;
+  color:white;
+  text-decoration:none;
+  padding:4px 6px;
+  font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+  font-size:12px;
+  font-weight:bold;
+  line-height:1.2;
+  display:inline-block;
+  border-radius:3px;
+  transition: background-color 300ms;
+}
+
+.unsplash:hover, .unsplash:focus {
+  background-color: #000;
 }
 
 @media (max-width: 800px) {
@@ -897,5 +984,12 @@ form input::placeholder, form textarea::placeholder {
 
   .footer_text p {
     margin: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer {
+    grid-template-areas: "copyright" "codeby" "unsplash";
+    grid-gap: 5px;
   }
 }

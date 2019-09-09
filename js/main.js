@@ -57,16 +57,18 @@ function setActiveLink() {
 window.addEventListener('scroll', setActiveLink);
 
 // Btns click actions
-// -- Show/hide Menu when Hamb is clicked
-navToggle.addEventListener('click', () => {
+
+function handleToggle() {
   navUl.classList.toggle('showNavUl');
-});
+  navToggle.classList.toggle('expanded');
+}
+
+// -- Show/hide Menu when Hamb is clicked
+navToggle.addEventListener('click', handleToggle);
 
 // -- collapse Menu once link is clicked
 menuLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    navUl.classList.toggle('showNavUl');
-  });
+  link.addEventListener('click', handleToggle);
 });
 
 // -- Back to top btn
