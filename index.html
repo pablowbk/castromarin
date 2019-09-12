@@ -323,15 +323,20 @@
       Póngase en contacto con nosotros, deje su mensaje y reciba una respuesta personalizada.
     </p>
   </header>
-  <form method="POST" name="formulario_contacto" netlify>
+  <form method="POST" name="formulario_contacto" data-netlify="true" data-netlify-recaptcha="true">
     <fieldset class="form_name">
-      <input type="text" id="name" placeholder="Nombre Completo" required>
+      <input type="text" id="name" name="name" placeholder="Nombre Completo" required>
       <label for="name">Nombre</label>
     </fieldset>
 
     <fieldset class="form_email">
-      <input type="email" id="email" placeholder="Email" required>
+      <input type="email" id="email" name="email" placeholder="Email" required>
       <label for="email">Correo electrónico</label>
+    </fieldset>
+
+    <fieldset class="form_edad">
+      <input type="number" id="edad" name="edad" placeholder="Edad" min="1" max="120">
+      <label for="edad">Edad</label>
     </fieldset>
 
     <fieldset class="form_provincia">
@@ -366,7 +371,7 @@
     </fieldset>
 
     <textarea name="meesage" maxlength="280" placeholder="Escriba su comentario..."></textarea>
-
+    <div data-netlify-recaptcha="true"></div>
     <button id="submit" type="submit" name="submit">Enviar</button>
   </form>
   <div class="contact_more">

@@ -839,6 +839,7 @@ button {
   grid-template-areas:
     "name     textarea"
     "email    textarea"
+    "edad    textarea"
     "subject  textarea"
     "empty    submit";
   justify-items: stretch;
@@ -855,6 +856,10 @@ button {
 
 .form_provincia {
   grid-area: subject;
+}
+
+.form_edad {
+  grid-area: edad;
 }
 
 form input, form textarea, form select {
@@ -938,6 +943,7 @@ form input::placeholder, form textarea::placeholder {
     grid-template-areas:
       "name"
       "email"
+      "edad"
       "subject"
       "textarea"
       "submit"
