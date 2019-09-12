@@ -369,7 +369,7 @@ button {
 
 .about__desc {
   font-size: 1.2em;
-  margin-top: 2em;
+  margin: 2em 0 3em;
 }
 
 .about__desc_p {
@@ -542,6 +542,7 @@ button {
 .col_content h3 {
   justify-self: center;
   align-self: flex-start;
+  text-transform: uppercase;
   font-weight: 700;
   margin: 10px 0 20px;
   text-align: center;
@@ -669,9 +670,14 @@ button {
   margin: auto 2em;  
 }
 
+.services .subheader {
+  margin: auto 2em;
+  width: 80%;
+  font-weight: 400;
+}
 
 .services__cols {
-  display: grid;
+  /* display: grid; */
   grid-gap: 30px;
   grid-template-columns: repeat(4, 260px);
 }
@@ -713,7 +719,7 @@ button {
 
 .col-big {
   grid-column: 1 / -1;
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
 }
 
 .col-big img {
@@ -740,6 +746,34 @@ button {
 .col-big button {
   margin-top: 15px;
   justify-self: start;
+}
+
+.services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.services__cols .banner {
+  margin: 3em 0;
+}
+
+.services__cols .banner h3 {
+  font-size: 1.3em;
+  color: var(--accent);
+}
+
+.services__cols .banner span {
+  color: var(--accent);
+  text-shadow: none;
+}
+
+.metodos {
+  margin: 2em 2em auto;
+}
+
+.modalidad {
+  margin: 2em 2em auto;
+
 }
 
 @media (max-width:1150px) {
@@ -881,6 +915,13 @@ form input::placeholder, form textarea::placeholder {
   color: #333;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
+
+.contact_more ul {
+  list-style: none;
+  padding: 0;
+}
+
+
 
 @media (max-width:800px) {
   .contact header {

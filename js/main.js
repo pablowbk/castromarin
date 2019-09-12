@@ -78,9 +78,9 @@ toTopBtn.addEventListener('click', () => {
 
 
 // -- prevent page from reloading when form is submitted
-submit.addEventListener('click', (e) => {
-  e.preventDefault();
-});
+// submit.addEventListener('click', (e) => {
+//   e.preventDefault();
+// });
 
 
 // Parallax-O-Matic effects
