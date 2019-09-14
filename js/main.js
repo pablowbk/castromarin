@@ -94,6 +94,11 @@ function parallaxMagic() {
 // window.addEventListener('scroll', parallaxMagic);
 
 
+// contact form , select style toggle
+const select = document.querySelector("select");
+select.addEventListener('change', function () {
+  this.classList.add("selected");
+});
 
 // footer text
 const copyright = document.querySelector('.copyright');

@@ -396,6 +396,7 @@ a {
 }
 
 .cv {
+  display: none;
   position: absolute;
   background: #fff;
   border: 2px solid;
@@ -503,16 +504,22 @@ a {
   font-weight: 600;
 }
 
-.col_content .btn:hover, .col_content .btn:focus {
-  background: #e6e6e6;
-}
-
 .col_content .btn-mnc {
   border-color: var(--primary);
 }
 
 .col_content .btn-pm {
   border-color: var(--accent);
+}
+
+.col_content .btn-mnc:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+.col_content .btn-pm:hover {
+  background: var(--accent);
+  color: #fff;
 }
 
 @media (max-width: 800px) {
@@ -570,24 +577,6 @@ a {
   text-shadow: 1px 1px 2px #666;
 }
 
-/* .banner h3::before {
-  content: "";
-  width: 5px;
-  margin-right: 2em;
-  padding-left: .7em;
-  border-right: 1em solid var(--primary);
-  box-shadow: -5px 0 0 0 var(--primary);
-}
-
-.banner h3::after {
-  content: "";
-  width: 5px;
-  margin-left: 2em;
-  padding-left: .7em;
-  border-left: 1em solid var(--primary);
-  box-shadow: 5px 0 0 0 var(--primary);
-} */
-
 @media (max-width: 800px) {
   .banner h3 {
     font-size: 1.4em;
@@ -603,8 +592,9 @@ a {
     padding: 0 1em;
   }
 }
-
 /* === About Section END === */
+
+
 /* === Services Section === */
 .services {
   display: grid;
@@ -644,6 +634,7 @@ a {
   padding: 10px 20px;
   margin: 0 0 15px;
 } */
+
 .services__cols button {
   justify-self: center;
   align-self: center;
@@ -830,6 +821,7 @@ form input, .form_provincia select {
   padding: 10px;
   border: none;
   background: rgba(100, 100, 100, 0.1);
+  font-family: "Open Sans";
 }
 
 form label {
@@ -842,7 +834,6 @@ form label {
 form textarea {
   font-size: 1em;
   font-family: "Open Sans";
-  color: #333;
   justify-self: stretch;
   grid-area: textarea;
   padding: 10px;
@@ -850,6 +841,13 @@ form textarea {
   border: none;
 }
 
+select {
+  color: #666;
+}
+
+.selected {
+  color: #000;
+}
 
 form #submit {
   grid-area: submit;
@@ -871,9 +869,10 @@ form #submit:hover, form #submit:focus {
 }
 
 form input::placeholder, form textarea::placeholder {
-  color: #333;
+  color: #666;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
+
 
 .contact_more ul {
   list-style: none;

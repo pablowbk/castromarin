@@ -52,7 +52,7 @@
 
   <div class="about__desc">
     <p class="about__desc_p">
-      Somos un equipo de profesionales interdisciplinarios, lo que nos permite trabajar desde nuevos y eficaces
+      Somos un equipo de profesionales interdisciplinario, lo que nos permite trabajar desde nuevos y eficaces
       tratamientos.
     </p>
     <p class="about__desc_p">
@@ -72,7 +72,7 @@
       <div class="col_content">
         <h3 class="mnc">María Nélida Castro</h3>
         <ul>
-          <li>Licencia en Psicología UBA</li>
+          <li>Licenciada en Psicología UBA</li>
           <li>Especializada en trastornos de ansiedad y otras perturbaciones derivadas de eventos traumáticos.</li>
           <li>Posgrado Clínica de Orientación Sistémica. Col de Psicólogos de la Pcía de Bs As.</li>
           <li>Mediación</li>
@@ -90,21 +90,15 @@
       <div class="profile"></div>
       <div class="col_content">
         <h3 class="pm">Pilar Marín</h3>
-        <p>
+        <ul>
           <li>Profesora en Ciencias de la Educación y Psicología</li>
           <li>Psicóloga Universidad Kennedy</li>
           <li>Posgrado Psicopedagogía Clínica FIAP. Directora Lic. Elina Dabas</li>
           <li>Terapia Familiar DIAP. Director Dr. Carlos María Diaz Usandivaras</li>
           <li>Psicoanalista.</li>
-          <li>Colaboradora y miembro del equipo fundador del espacio psicoanalítico:
-            <ul>
-              <li>Convocatoria Clínica. Directores Lic. Cristina Marrone Dr. Pablo Kovalovsky.</li>
-            </ul>
-          </li>
-        </p>
+          <li>Colaboradora y miembro del equipo fundador del espacio psicoanalítico: <strong>Convocatoria Clínica</strong>. Directores: Lic. Cristina Marrone, Dr. Pablo Kovalovsky.</li>
+        </ul>
         <button class="btn btn-more btn-pm">Leer más</button>
-        
-        
       </div>
     </div>
 
@@ -141,8 +135,8 @@
             Hospital Nacional de Agudos “Manuel Belgrano”; Equipo San José de Asistencia y Adopción; Hospital Gutiérrez. Servicio de
             neurología a cargo del Dr. Jorge Grippo, Realiza prácticas con musicoterapia para niños autistas; centro de Salud Mental
             No. 1 que depende del Hospital Pirovano. Director Dr. Marcos Weinstein.
-              </p>
-            </div>
+      </p>
+    </div>
   </div>
     <!-- Columns start -->
 </section>
@@ -186,7 +180,7 @@
         <h3>Areas</h3>
         <div class="text">
           <ul>
-            <li>Probelmas emocionales y de conducta</li>
+            <li>Problemas emocionales y de conducta</li>
             <li>Rehabilitación Cognitiva</li>
             <li>Acogimiento en familias nuevas</li>
             <li>Adopción</li>
@@ -283,23 +277,23 @@
   </header>
   <form method="POST" name="formulario_contacto" data-netlify="true" data-netlify-recaptcha="true">
     <fieldset class="form_name">
-      <input type="text" id="name" name="name" placeholder="Nombre Completo" required>
+      <input type="text" id="name" name="name" placeholder="Nombre Completo..." required>
       <label for="name">Nombre</label>
     </fieldset>
 
     <fieldset class="form_email">
-      <input type="email" id="email" name="email" placeholder="Email" required>
+      <input type="email" id="email" name="email" placeholder="Correo Electrónico..." required>
       <label for="email">Correo electrónico</label>
     </fieldset>
 
     <fieldset class="form_edad">
-      <input type="number" id="edad" name="edad" placeholder="Edad" min="1" max="120">
+      <input type="number" id="edad" name="edad" placeholder="Edad..." min="1" max="120">
       <label for="edad">Edad</label>
     </fieldset>
 
     <fieldset class="form_provincia">
       <select name="provincia">
-        <option value="seleccione" selected disabled>Provincia...</option>
+        <option value="Seleccione" selected disabled>Provincia...</option>
         <option value="Buenos Aires">Buenos Aires</option>
         <option value="Capital Federal">Capital Federal</option>
         <option value="Catamarca">Catamarca</option>
@@ -329,9 +323,7 @@
     </fieldset>
 
     <textarea name="meesage" maxlength="350" placeholder="Escriba su comentario..." required></textarea>
-    
-    <div data-netlify-recaptcha="true" class="form_captcha"></div>
-    
+        
     <button id="submit" type="submit" name="submit">Enviar</button>
   </form>
 
