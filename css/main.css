@@ -818,9 +818,9 @@ a {
 }
 
 @media (max-width:1150px) {
-  .services__cols {
+  /* .services__cols {
     justify-items: center;
-  }
+  } */
 }
 
 @media (max-width: 800px) {
@@ -837,16 +837,41 @@ a {
   .areas h3 {
     justify-self: start;
   }
+
+  #work {
+    display: block;
+  }
 }
 
 @media (max-width:600px) {
-  .services__cols {
+  #work .services__cols {
     grid-template-columns: minmax(260px, 400px);
     justify-items: center;
   }
 
+  #work .services__cols h3 {
+    margin: 0;
+  }
+
+  #work .services__cols .col_content {
+    margin-bottom: 1em;
+  }
+
   .col-sm {
     width: 100%;
+  }
+
+  #work .col_content {
+    grid-template-columns: 1fr;
+    /* margin: 0 2em; */
+  }
+
+  .modalidad, .metodos {
+    grid-template-columns: 1fr;
+  }
+
+  #work .banner h3 {
+    margin: 1em 0;
   }
 
 }
