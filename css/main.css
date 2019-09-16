@@ -58,9 +58,9 @@ a {
   right: 0;
   left: 0;
   z-index: 99;
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
 }
 
 .nav ul {
@@ -101,16 +101,6 @@ a {
   background: var(--primary);
   font-weight: 600;
   /* box-shadow: 0 5px 10px -5px rgba(19, 102, 96, .5); */
-}
-
-/* Logo */
-.logo {
-  /* position: absolute; */
-  height: 60px;
-  width: 60px;
-  background: url('../img/faro.png');
-  background-size: cover;
-  margin-left: 1em;
 }
 
 /* === Hamburguer Btn */
@@ -181,6 +171,7 @@ a {
   .nav {
     margin: 50px 10px 10px;
     overflow: hidden;
+    display: block;
   }
 
   .nav ul {
@@ -259,14 +250,14 @@ a {
   align-items: center;
   justify-items: center;
   text-align: center;
-  height: 614px;
+  height: 650px;
   background: var(--primary);
   background-image: url("../img/hero-ana.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   /* background-position-y: -100px; */
   /* background-position-x: 50px; */
-  /* background-position: top; */
   /* background-attachment: fixed; */
   /* background-blend-mode: overlay; */
 }
@@ -314,12 +305,20 @@ a {
   font-weight: 600;
 }
 
-.subtitle h3:first-of-type {
-}
-
 .subtitle h3 span {
   font-size: 1.3em;
   padding: 5px 10px;
+}
+
+/* Logo */
+.logo {
+  /* position: absolute;
+  margin-left: 1em; */
+  height: 60px;
+  width: 60px;
+  background: url('../img/faro.png');
+  background-size: cover;
+  /* display: none; */
 }
 
 @media (max-width: 800px) {
@@ -405,10 +404,14 @@ a {
 
 .mnc {
   box-shadow: 0 2px 0 0 var(--primary);
+  justify-self: center;
+  padding-bottom: 5px;
 }
 
 .pm {
   box-shadow: 0 2px 0 0 var(--accent);
+  justify-self: center;
+  padding-bottom: 5px;
 }
 
 .cv {
@@ -541,7 +544,7 @@ a {
 @media (max-width: 800px) {
   .about {
     grid-template-columns: 1fr;
-    margin: 0 10px;
+    margin: 0 2em;
     padding-top: 2em;
   }
 
@@ -791,6 +794,10 @@ a {
   margin: 3em 0;
 } */
 
+#work {
+  color: #333;
+}
+
 #work .banner h3 {
   font-size: 1.5em;
   color: var(--accent);
@@ -826,6 +833,10 @@ a {
   margin: 0 2em auto;
   display: grid;
   grid-template-columns: minmax(400px, 600px);
+}
+
+.metodos h3, .modalidad h3, .modalidad h4, .metodos strong {
+  color: var(--grey);
 }
 
 @media (max-width:1150px) {
@@ -929,7 +940,7 @@ a {
     "subject    textarea"
     "captcha    submit";
   justify-items: stretch;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .form_name {
@@ -1025,13 +1036,14 @@ form input::placeholder, form textarea::placeholder {
 .contact_more ul {
   list-style: none;
   padding: 0;
+  color: #333;
 }
 
 
 
 @media (max-width:800px) {
   .contact header {
-    margin: 80px 1em 0;
+    margin: 80px 0 0;
   }
 
   .contact .section__header p {
@@ -1047,7 +1059,6 @@ form input::placeholder, form textarea::placeholder {
       "edad"
       "subject"
       "textarea"
-      "catpcha"
       "submit"
     ;
     align-self: stretch;
@@ -1070,12 +1081,13 @@ form input::placeholder, form textarea::placeholder {
   padding: 10px;
   display: grid;
   grid-gap: 1em;
-  grid-template-areas: "copyright codeby unsplash";
+  grid-template-areas: "copyright codeby";
   justify-items: center;
   justify-content: center;
   align-items: center;
   background: #fff;
   color: #333;
+  background: rgba(200,200,200,.1);
 }
 
 .footer_text p {
@@ -1119,25 +1131,6 @@ form input::placeholder, form textarea::placeholder {
   grid-area: codeby;
 }
 
-.unsplash {
-  grid-area: unsplash;
-  background-color:#666;
-  color:white;
-  text-decoration:none;
-  padding:4px 6px;
-  font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
-  font-size: .8em;
-  font-weight:bold;
-  line-height:1.2;
-  display:inline-block;
-  border-radius:3px;
-  transition: background-color 300ms;
-}
-
-.unsplash:hover, .unsplash:focus {
-  background-color: #000;
-}
-
 @media (max-width: 800px) {
   .footer {
     margin-top: 20px;
@@ -1150,7 +1143,7 @@ form input::placeholder, form textarea::placeholder {
 
 @media (max-width: 500px) {
   .footer {
-    grid-template-areas: "copyright copyright codeby codeby" "unsplash unsplash unsplash unsplash";
+    /* grid-template-areas: "copyright codeby"; */
     grid-gap: 5px;
     justify-items: center;
     font-size: .8em;
