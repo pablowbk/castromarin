@@ -58,7 +58,9 @@ a {
   right: 0;
   left: 0;
   z-index: 99;
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav ul {
@@ -99,6 +101,16 @@ a {
   background: var(--primary);
   font-weight: 600;
   /* box-shadow: 0 5px 10px -5px rgba(19, 102, 96, .5); */
+}
+
+/* Logo */
+.logo {
+  /* position: absolute; */
+  height: 60px;
+  width: 60px;
+  background: url('../img/faro.png');
+  background-size: cover;
+  margin-left: 1em;
 }
 
 /* === Hamburguer Btn */
@@ -249,14 +261,14 @@ a {
   text-align: center;
   height: 614px;
   background: var(--primary);
-  background-image: url("../img/hero2.jpg");
+  background-image: url("../img/hero-ana.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: -100px;
+  /* background-position-y: -100px; */
   /* background-position-x: 50px; */
   /* background-position: top; */
-  background-attachment: fixed;
-  background-blend-mode: overlay;
+  /* background-attachment: fixed; */
+  /* background-blend-mode: overlay; */
 }
 
 .hero header {
@@ -269,13 +281,15 @@ a {
 }
 
 .hero h1 {
-  background-color: var(--primary);
+  /* background-color: var(--primary); */
   font-size: 3em;
-  font-weight: 600;
+  font-weight: 800;
+  color: var(--accent);
   /* text-transform: uppercase; */
-  padding: 10px 20px;
   margin: 0;
-  box-shadow: 0 0 30px 0 rgba(0, 0, 0, .3);
+  padding: 10px;
+  /* box-shadow: 0 0 30px 0 rgba(0, 0, 0, .3); */
+  border-bottom: 6px solid var(--accent);
 }
 
 .hero header p {
@@ -294,20 +308,17 @@ a {
 }
 
 .subtitle h3 {
-  background: rgba(152, 221, 216, 1);
-  background: var(--primary);
-  margin: 5px;
+  color: var(--accent);
+  margin: 0 5px;
   padding: 5px 10px;
-  font-weight: 300;
+  font-weight: 600;
 }
 
 .subtitle h3:first-of-type {
-  background: none;
 }
 
 .subtitle h3 span {
-  background: var(--primary);
-  margin: 5px;
+  font-size: 1.3em;
   padding: 5px 10px;
 }
 
