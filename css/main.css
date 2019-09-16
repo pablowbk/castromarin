@@ -325,8 +325,7 @@ a {
   .hero {
     margin-top: 0;
     height: 100vh;
-    background-position-y: 0px;
-    background-position-x: -100px;
+    background-position: -500px center;
   }
   
   .hero h1 {
@@ -340,7 +339,7 @@ a {
 
 @media (max-width: 500px) {
   .hero {
-    background-position-x: -200px;
+    background-position: center;
   }
 
   .hero h1 {
@@ -348,6 +347,10 @@ a {
   }
 
   .hero header p {
+    font-size: .8em;
+  }
+
+  .subtitle h3 {
     font-size: .8em;
   }
 }
