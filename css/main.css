@@ -324,8 +324,7 @@ a {
 @media (max-width: 800px) {
   .hero {
     margin-top: 0;
-    height: 100vh;
-    background-position: -500px center;
+    background-position: center;
   }
   
   .hero h1 {
@@ -339,6 +338,7 @@ a {
 
 @media (max-width: 500px) {
   .hero {
+    height: 100vh;
     background-position: center;
   }
 
@@ -453,7 +453,7 @@ a {
   width: 100%;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  /* overflow: hidden; */
   transition: box-shadow 300ms;
 }
 
@@ -560,11 +560,20 @@ a {
     grid-template-columns: 1fr;
     grid-template-areas: "col1""col2";
     max-width: 100%;
-    margin: 0 30px 30px;
+    margin: 0 0 30px;
   }
 }
 
 @media (max-width: 500px) {
+
+  .about__cols .col_content {
+    padding: 1em 0;
+  }
+
+  .about__cols .col_content ul {
+    padding-left: 1em;
+  }
+
   .about__desc_p {
     margin: 0;
     padding: 0 1em;
@@ -866,6 +875,10 @@ a {
   #work {
     display: block;
   }
+
+  #work .banner h3 {
+    font-size: 1.4em;
+  }
 }
 
 @media (max-width:600px) {
@@ -880,6 +893,10 @@ a {
 
   #work .services__cols .col_content {
     margin-bottom: 1em;
+  }
+
+  #work .banner h3 {
+    font-size: 1.2em;
   }
 
   .col-sm {
