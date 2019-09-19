@@ -1032,6 +1032,11 @@ form input::placeholder, form textarea::placeholder {
 .contact_list a {
   display: flex;
   align-items: center;
+  transition: color 300ms;
+}
+
+.contact_list a:hover, .contact_list:focus {
+  color: var(--accent);
 }
 
 .contact_list img {
