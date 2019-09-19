@@ -5,7 +5,7 @@
   --blueHover: rgb(8, 150, 195);
   --green: rgb(27, 120, 59);
   --greenHover: rgb(42, 170, 86);
-  --grey: rgb(102, 102, 102);
+  --grey: #666666;
   --primary: #ade7e3;
   --darker: #89b6b3;
   --accent: #E89A97;
@@ -58,13 +58,10 @@ a {
   right: 0;
   left: 0;
   z-index: 99;
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center; */
+  
 }
 
 .nav ul {
-  /* background: rgb(56, 62, 76); */
   background-color: #fff;
   list-style: none;
   margin: 0;
@@ -100,7 +97,6 @@ a {
 .active {
   background: var(--primary);
   font-weight: 600;
-  /* box-shadow: 0 5px 10px -5px rgba(19, 102, 96, .5); */
 }
 
 /* === Hamburguer Btn */
@@ -146,9 +142,6 @@ a {
 .navToggle:hover, .navToggle:focus {
   background-color: var(--darker);
 }
-/* .line + .line {
-  margin-top: 4px;
-} */
 
 /* action when menu is expanded */
 .navToggle.expanded .line:nth-of-type(2) {
@@ -256,10 +249,6 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /* background-position-y: -100px; */
-  /* background-position-x: 50px; */
-  /* background-attachment: fixed; */
-  /* background-blend-mode: overlay; */
 }
 
 .hero header {
@@ -272,14 +261,11 @@ a {
 }
 
 .hero h1 {
-  /* background-color: var(--primary); */
   font-size: 3em;
   font-weight: 800;
   color: var(--accent);
-  /* text-transform: uppercase; */
   margin: 0;
   padding: 10px;
-  /* box-shadow: 0 0 30px 0 rgba(0, 0, 0, .3); */
   border-bottom: 6px solid var(--accent);
 }
 
@@ -311,14 +297,19 @@ a {
 }
 
 /* Logo */
-.logo {
-  /* position: absolute;
-  margin-left: 1em; */
+/* .logo {   este era el farito
   height: 60px;
   width: 60px;
   background: url('../img/faro.png');
   background-size: cover;
-  /* display: none; */
+} */
+
+#logo {
+  width: 100px;
+}
+
+.logo {
+  width: 200px;
 }
 
 @media (max-width: 800px) {
@@ -353,14 +344,15 @@ a {
   .subtitle h3 {
     font-size: .8em;
   }
+
+  #logo {
+    width: 60px;
+  }
 }
 
 /* === Hero end === */
 /* === About Section === */
 .about {
-  /* display: grid;
-  grid-gap: 60px;
-  margin: 0 10%; */
   margin: 2em;
   padding-top: 100px;
   position: relative;
@@ -376,7 +368,6 @@ a {
   font-size: 2em;
   color: #666;
   padding-bottom: .5em;
-  /* margin-bottom: 2em; */
   position: relative;
 }
 
@@ -443,7 +434,6 @@ a {
   grid-template-columns: repeat(2, minmax(100px, 600px));
   grid-template-areas: "col1 col2";
   grid-gap: 30px;
-  /* margin-top: 30px; */
   margin-bottom: 60px;
   justify-items: center;
   justify-content: center;
@@ -453,7 +443,6 @@ a {
   width: 100%;
   display: flex;
   flex-direction: column;
-  /* overflow: hidden; */
   transition: box-shadow 300ms;
 }
 
@@ -611,8 +600,6 @@ a {
 @media (max-width: 800px) {
   .banner h3 {
     font-size: 1.4em;
-    /* padding: 1em;
-    margin: 1em 0; */
     padding: 0 1.5em;
   }
 }
@@ -644,22 +631,9 @@ a {
   font-weight: 400;
 }
 
-/* .services__cols {
-  display: grid;
-  grid-gap: 30px;
-  grid-template-columns: repeat(4, 260px);
-} */
-
 #services .services__cols {
   display: grid;
 }
-
-#services .services__cols .col-big {
-}
-
-/* .services__cols .col_content {
-  grid-template-rows: 1fr 3fr 1fr;
-} */
 
 .services__cols h3 {
   font-size: 1.4em;
@@ -668,11 +642,6 @@ a {
   color: #666;
   margin: 0 0 15px;
 }
-
-/* .services__cols p {
-  padding: 10px 20px;
-  margin: 0 0 15px;
-} */
 
 .services__cols button {
   justify-self: center;
@@ -755,9 +724,6 @@ a {
   justify-self: start;
 }
 
-.adultos {
-}
-
 .areas {
   grid-template-columns: 1fr 3fr;
   grid-gap: 30px;
@@ -789,22 +755,6 @@ a {
   padding-bottom: 5px;
 }
 
-/* .areas ul li::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  background-color: var(--primary);
-
-} */
-
-/* .services ul {
-  list-style: none;
-  padding: 0;
-} */
-
-/* #work .banner {
-  margin: 3em 0;
-} */
 
 #work {
   color: #333;
@@ -851,11 +801,6 @@ a {
   color: var(--grey);
 }
 
-@media (max-width:1150px) {
-  /* .services__cols {
-    justify-items: center;
-  } */
-}
 
 @media (max-width: 800px) {
   .services {
@@ -905,7 +850,6 @@ a {
 
   #work .col_content {
     grid-template-columns: 1fr;
-    /* margin: 0 2em; */
   }
 
   .modalidad, .metodos {
@@ -941,7 +885,6 @@ a {
   justify-self: center;
   max-width: 800px;
   text-align: left;
-  /* background: #f2f2f2; */
   border-radius: 5px;
   padding: 2em;
 }
@@ -1053,10 +996,48 @@ form input::placeholder, form textarea::placeholder {
 }
 
 
-.contact_more ul {
+.contact_more {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--grey);
+  margin-top: 70px;
+}
+
+.more_header {
+  margin-right: 30px;
+}
+
+.more_header h2, .more_header h4 {
+  margin-top: 0;
+  margin-bottom: .5em;
+  text-align: center;
+}
+
+.more_header h4 {
+  color: var(--darker);
+}
+
+.contact_list {
   list-style: none;
   padding: 0;
   color: #333;
+}
+
+.contact_list li + li {
+  margin-top: 10px;
+}
+
+.contact_list a {
+  display: flex;
+  align-items: center;
+}
+
+.contact_list img {
+  height: auto;
+  width: 30px;
+  margin-right: 10px;
 }
 
 
@@ -1091,6 +1072,18 @@ form input::placeholder, form textarea::placeholder {
 
   form #submit {
     justify-self: stretch;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact_more {
+    flex-direction: column;
+    justify-content: center;
+    margin: 2em 0;
+  }
+  .more_header {
+    margin-right: 0;
+    margin-bottom: 30px;
   }
 }
 
@@ -1163,7 +1156,6 @@ form input::placeholder, form textarea::placeholder {
 
 @media (max-width: 500px) {
   .footer {
-    /* grid-template-areas: "copyright codeby"; */
     grid-gap: 5px;
     justify-items: center;
     font-size: .8em;
