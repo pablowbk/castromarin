@@ -10,8 +10,8 @@
  <g>
   <title>Layer 1</title>
   <g id="svg_3">
-   <path stroke="#89b6b3" id="svg_2" d="m137.999999,172.375009l80.500003,-140.875013l80.500003,140.875013l-161.000006,0z" stroke-width="8" fill="none"/>
-   <path id="svg_1" d="m21,231.500002l116.000003,-203.000003l116.000003,203.000003l-232.000006,0z" stroke-width="8" stroke="#666666" fill="none"/>
+   <path stroke="#E89A97" id="svg_2" d="m137.999999,172.375009l80.500003,-140.875013l80.500003,140.875013l-161.000006,0z" stroke-width="8" fill="none"/>
+   <path id="svg_1" d="m21,231.500002l116.000003,-203.000003l116.000003,203.000003l-232.000006,0z" stroke-width="8" stroke="#89b6b3" fill="none"/>
   </g>
  </g>
 </svg>

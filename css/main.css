@@ -304,6 +304,15 @@ a {
   background-size: cover;
 } */
 
+.logo_container {
+
+}
+
+.logo_container h3 {
+  margin: 0;
+  color: var(--grey);
+}
+
 #logo {
   width: 100px;
 }
@@ -311,6 +320,8 @@ a {
 .logo {
   width: 200px;
 }
+
+
 
 @media (max-width: 800px) {
   .hero {
