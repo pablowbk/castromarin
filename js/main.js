@@ -6,6 +6,10 @@ const work = document.querySelector('#work');
 const contact = document.querySelector('.contact');
 const navUl = document.getElementById('navUl');
 
+// hidden CV boxes
+const mncCV = document.querySelector('.cv-mnc');
+const pmCV = document.querySelector('.cv-pm');
+
   // Parallax containers
 
 
@@ -20,6 +24,10 @@ const menuLinks = document.querySelectorAll('.nav a')
   // Btns
 const submitBtn = document.getElementById('submit');
 const toTopBtn = document.querySelector('.toTopBtn');
+const mncMoreBtn = document.querySelector('.btn-mnc')
+const mncCloseBtn = document.querySelector('.btn-mnc.close')
+const pmMoreBtn = document.querySelector('.btn-pm')
+const pmCloseBtn = document.querySelector('.btn-pm.close')
 
 var yOffset; // pageYOffset value
 
@@ -94,11 +102,28 @@ function parallaxMagic() {
 // window.addEventListener('scroll', parallaxMagic);
 
 
+// CV Read More btns
+mncMoreBtn.addEventListener('click', () => {
+  mncCV.classList.toggle('show');
+})
+mncCloseBtn.addEventListener('click', () => {
+  mncCV.classList.toggle('show');
+})
+
+pmMoreBtn.addEventListener('click', () => {
+  pmCV.classList.toggle('show');
+})
+pmCloseBtn.addEventListener('click', () => {
+  pmCV.classList.toggle('show');
+})
+
 // contact form , select style toggle
 const select = document.querySelector("select");
 select.addEventListener('change', function () {
   this.classList.add("selected");
 });
+
+
 
 // footer text
 const copyright = document.querySelector('.copyright');
