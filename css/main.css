@@ -728,15 +728,17 @@ a {
   overflow: hidden;
 }
 
-/* .adultos .content-inner:hover .img-overlay {
+/*
+.adultos img:hover .img-overlay {
+
   transform: translateX(1000px);
 }
 
-.adolescentes .content-inner:hover .img-overlay {
+.adolescentes img:hover .img-overlay {
   transform: translateX(1000px);
 }
 
-.adolescentes:last-of-type .content-inner:hover .img-overlay {
+.adolescentes:last-of-type img:hover .img-overlay {
   transform: translateX(1000px);
 } */
 
