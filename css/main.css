@@ -600,6 +600,7 @@ a {
   .about__desc_p {
     margin: 0;
     padding: 0 1em;
+    font-size: 1  em;
   }
 }
 
@@ -810,7 +811,7 @@ a {
   content:"";
   display: block;
   height: 20px;
-  width: 20px;
+  min-width: 20px;
   margin-right: 10px;
   border-radius: 50%;
   background-color: var(--primary);
@@ -889,6 +890,11 @@ a {
 }
 
 @media (max-width:600px) {
+
+  /* .services .subheader {
+    margin: 0 auto;
+  } */
+
   #work .services__cols {
     grid-template-columns: minmax(260px, 400px);
     justify-items: center;
@@ -899,7 +905,7 @@ a {
   }
 
   #work .services__cols .col_content {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
   }
 
   #work .banner h3 {
@@ -912,6 +918,11 @@ a {
 
   #work .col_content {
     grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  #work .col_content p {
+    padding: 0 1em;
   }
 
   .modalidad, .metodos {
