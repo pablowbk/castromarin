@@ -304,10 +304,6 @@ a {
   background-size: cover;
 } */
 
-.logo_container {
-
-}
-
 .logo_container h3 {
   margin: 0;
   color: var(--grey);
@@ -597,11 +593,19 @@ a {
     padding-left: 1em;
   }
 
+  .about__desc {
+    font-size: 1em;
+  }
+
   .about__desc_p {
     margin: 0;
     padding: 0 1em;
-    font-size: 1  em;
   }
+
+  .mnc, .pm {
+    padding-bottom: 0px;
+  }
+
 }
 
 .banner {
@@ -871,6 +875,16 @@ a {
   .services {
     padding-top: 2em;
   }
+
+  .services .subheader {
+    margin: 0;
+    width: 100%;
+  }
+  
+  .services .col-big_content {
+    padding: 30px 0;
+  }
+
   .col-big_content .content-inner {
     grid-template-columns: 1fr;
     grid-template-areas: "img" "text";
@@ -889,6 +903,11 @@ a {
   #work .banner h3 {
     font-size: 1.4em;
   }
+
+  .metodos ul, .modalidad ul {
+    padding-left: 1em;
+  }
+
 }
 
 @media (max-width:600px) {
